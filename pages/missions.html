@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="রূপান্তর গোপন মিশন — ২০০টি গোপন লক্ষ্য">
+  <title>গোপন মিশন — রূপান্তর</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Noto+Sans+Bengali:wght@300;400;500;600;700;800;900&family=Noto+Serif+Bengali:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <style>
+    .missions-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 16px;
+    }
+    .mission-item {
+      background: linear-gradient(160deg, rgba(93,58,95,0.15) 0%, rgba(26,34,56,0.6) 100%);
+      border: 1px solid rgba(201,169,97,0.2);
+      border-left: 3px solid #9D4EDD;
+      border-radius: 12px;
+      padding: 16px 18px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+    .mission-item:hover {
+      border-color: #C9A961;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.4), 0 0 20px rgba(157,78,221,0.3);
+    }
+    .mission-num {
+      font-family: 'Cinzel', serif;
+      font-weight: 700;
+      color: #C9A961;
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+    }
+    .mission-name {
+      font-family: 'Noto Serif Bengali', serif;
+      font-weight: 700;
+      color: #F5F1E8;
+      font-size: 1.05rem;
+      margin: 4px 0 8px;
+    }
+    .mission-desc {
+      color: #B8C0D4;
+      font-size: 0.88rem;
+      line-height: 1.6;
+    }
+    .mission-reward {
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid rgba(201,169,97,0.15);
+      color: #E8C878;
+      font-weight: 600;
+      font-size: 0.85rem;
+    }
+    .mission-reward i { margin-right: 6px; }
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-container">
+    <a href="../index.html" class="nav-logo">
+      <svg class="nav-logo-emblem" viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="44" fill="none" stroke="#C9A961" stroke-width="1.5"/>
+        <polygon points="50,28 56,50 50,72 44,50" fill="#E8C878"/>
+        <polygon points="28,50 50,44 72,50 50,56" fill="#C9A961"/>
+        <circle cx="50" cy="50" r="3" fill="#FFE066"/>
+      </svg>
+      রূপান্তর
+    </a>
+    <ul class="nav-menu">
+      <li><a href="../index.html" class="nav-link">হোম</a></li>
+      <li><a href="cards.html" class="nav-link">কার্ড ভাণ্ডার</a></li>
+      <li><a href="rulebook.html" class="nav-link">রুলবুক</a></li>
+      <li><a href="play.html" class="nav-link" style="color:#E8C878;font-weight:700;"><i class="fas fa-play"></i> খেলুন</a></li>
+      <li><a href="missions.html" class="nav-link active">মিশন</a></li>
+      <li><a href="expansions.html" class="nav-link">এক্সপানশন</a></li>
+      <li><a href="faq.html" class="nav-link">প্রশ্নোত্তর</a></li>
+    </ul>
+    <button class="nav-toggle"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="page-hero-content">
+    <div class="display-en">Secret Missions</div>
+    <h1 class="display-1">গোপন মিশন</h1>
+    <div class="display-en" style="margin-top:8px;">200 SECRET GOALS</div>
+    <p class="lead" style="max-width:700px;margin:32px auto 0;">
+      প্রতিটি খেলোয়াড় গোপন একটি লক্ষ্য নিয়ে খেলে। সেই লক্ষ্য কখনো প্রকাশ করা হয় না—কেবল পূরণ করা হয়।
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+
+    <div class="stat-block" style="max-width:800px;margin:0 auto 48px;">
+      <div class="stat-item">
+        <div class="stat-num" data-counter="200">০</div>
+        <div class="stat-label">মোট মিশন</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">২-৩</div>
+        <div class="stat-label">প্রতি খেলোয়াড়</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">৩-১০</div>
+        <div class="stat-label">পয়েন্ট প্রতি মিশন</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">১০</div>
+        <div class="stat-label">মিশন শ্রেণী</div>
+      </div>
+    </div>
+
+    <div class="callout" style="max-width:800px;margin:0 auto 48px;">
+      <div class="callout-title"><i class="fas fa-info-circle"></i> মিশন কীভাবে কাজ করে</div>
+      <div class="callout-body">
+        প্রতিটি খেলায় প্রতিটি খেলোয়াড় এই ২০০টি মিশনের মধ্য থেকে দুই থেকে তিনটি গোপনভাবে পান। মিশন পূরণ করলে খেলোয়াড় পয়েন্ট অর্জন করেন। গেমের শেষে সবচেয়ে বেশি পয়েন্ট পাওয়া খেলোয়াড় বিজয়ী হন।
+      </div>
+    </div>
+
+    <h2 class="h2 text-center mb-5">সমস্ত মিশন</h2>
+    <div class="missions-grid" id="missions-grid"></div>
+
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="nav-logo">
+          <svg class="nav-logo-emblem" viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="44" fill="none" stroke="#C9A961" stroke-width="1.5"/>
+            <polygon points="50,28 56,50 50,72 44,50" fill="#E8C878"/>
+            <polygon points="28,50 50,44 72,50 50,56" fill="#C9A961"/>
+            <circle cx="50" cy="50" r="3" fill="#FFE066"/>
+          </svg>
+          রূপান্তর
+        </div>
+        <p>একটি প্রিমিয়াম বাংলা কার্ড গেম। সম্পূর্ণ মৌলিক মেকানিক, নতুন বিশ্ব, নতুন প্রতীক ব্যবস্থার উপর প্রতিষ্ঠিত।</p>
+      </div>
+      <div class="footer-col">
+        <h4>গেম</h4>
+        <ul>
+          <li><a href="cards.html">কার্ড ভাণ্ডার</a></li>
+          <li><a href="rulebook.html">রুলবুক</a></li>
+          <li><a href="missions.html">মিশন</a></li>
+          <li><a href="expansions.html">এক্সপানশন</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>সম্পর্কে</h4>
+        <ul>
+          <li><a href="faq.html">প্রশ্নোত্তর</a></li>
+          <li><a href="../index.html">গেম দর্শন</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>যোগাযোগ</h4>
+        <ul>
+          <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
+          <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">© ২০২৬ রূপান্তর গেম স্টুডিও · EDITION I · MMXXVI · কার্ড নয়, পৃথিবী বদলাও</div>
+  </div>
+</footer>
+
+<script src="../js/data.js"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="রূপান্তর — একটি প্রিমিয়াম বাংলা কার্ড গেম। কার্ড নয়, পৃথিবী বদলাও।">
+  <title>রূপান্তর — প্রিমিয়াম কার্ড গেম</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Noto+Sans+Bengali:wght@300;400;500;600;700;800;900&family=Noto+Serif+Bengali:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<!-- ===== NAVIGATION ===== -->
+<nav class="nav">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">
+      <svg class="nav-logo-emblem" viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="44" fill="none" stroke="#C9A961" stroke-width="1.5"/>
+        <circle cx="50" cy="50" r="36" fill="none" stroke="#C9A961" stroke-width="0.5"/>
+        <polygon points="50,28 56,50 50,72 44,50" fill="#E8C878"/>
+        <polygon points="28,50 50,44 72,50 50,56" fill="#C9A961"/>
+        <circle cx="50" cy="50" r="3" fill="#FFE066"/>
+      </svg>
+      রূপান্তর
+    </a>
+    <ul class="nav-menu">
+      <li><a href="index.html" class="nav-link">হোম</a></li>
+      <li><a href="pages/cards.html" class="nav-link">কার্ড ভাণ্ডার</a></li>
+      <li><a href="pages/rulebook.html" class="nav-link">রুলবুক</a></li>
+      <li><a href="pages/play.html" class="nav-link" style="color:#E8C878;font-weight:700;"><i class="fas fa-play"></i> খেলুন</a></li>
+      <li><a href="pages/missions.html" class="nav-link">মিশন</a></li>
+      <li><a href="pages/expansions.html" class="nav-link">এক্সপানশন</a></li>
+      <li><a href="pages/faq.html" class="nav-link">প্রশ্নোত্তর</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="মেনু">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="hero-bg-pattern"></div>
+  <div class="hero-particles"></div>
+
+  <div class="hero-content">
+    <svg class="hero-emblem" viewBox="0 0 200 200">
+      <defs>
+        <radialGradient id="hg" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#E8C878" stop-opacity="0.9"/>
+          <stop offset="60%" stop-color="#C9A961" stop-opacity="0.7"/>
+          <stop offset="100%" stop-color="#8B6914" stop-opacity="0.4"/>
+        </radialGradient>
+      </defs>
+      <circle cx="100" cy="100" r="92" fill="none" stroke="#C9A961" stroke-width="1" opacity="0.7"/>
+      <circle cx="100" cy="100" r="82" fill="none" stroke="#C9A961" stroke-width="0.5" opacity="0.5"/>
+      <g stroke="#C9A961" stroke-width="0.4" opacity="0.6">
+        <line x1="100" y1="20" x2="100" y2="180"/>
+        <line x1="20" y1="100" x2="180" y2="100"/>
+        <line x1="44" y1="44" x2="156" y2="156"/>
+        <line x1="156" y1="44" x2="44" y2="156"/>
+      </g>
+      <g fill="url(#hg)" stroke="#E8C878" stroke-width="0.5">
+        <polygon points="100,40 92,60 108,60"/>
+        <polygon points="160,100 140,92 140,108"/>
+        <polygon points="100,160 92,140 108,140"/>
+        <polygon points="40,100 60,92 60,108"/>
+      </g>
+      <circle cx="100" cy="100" r="32" fill="none" stroke="#C9A961" stroke-width="0.8"/>
+      <circle cx="100" cy="100" r="24" fill="none" stroke="#E8C878" stroke-width="0.5"/>
+      <circle cx="100" cy="100" r="14" fill="rgba(201,169,97,0.15)" stroke="#E8C878" stroke-width="0.5"/>
+      <polygon points="100,82 106,100 100,118 94,100" fill="#E8C878"/>
+      <polygon points="82,100 100,94 118,100 100,106" fill="#C9A961"/>
+      <circle cx="100" cy="100" r="4" fill="#FFE066"/>
+    </svg>
+
+    <div class="display-en">A Premium Card Game</div>
+    <h1 class="display-1">রূপান্তর</h1>
+    <div class="display-en" style="margin-top:8px;">RUPANTOR</div>
+    <p class="hero-tagline">কার্ড নয়, পৃথিবী বদলাও</p>
+
+    <div class="hero-cta">
+      <a href="pages/cards.html" class="btn btn-primary">
+        <i class="fas fa-layer-group"></i> কার্ড ভাণ্ডার দেখুন
+      </a>
+      <a href="pages/rulebook.html" class="btn btn-outline">
+        <i class="fas fa-book-open"></i> রুলবুক পড়ুন
+      </a>
+    </div>
+
+    <div class="hero-meta">
+      <div class="hero-meta-item">২–৬ খেলোয়াড়</div>
+      <div class="hero-meta-item">১২+ বছর</div>
+      <div class="hero-meta-item">২০–৪৫ মিনিট</div>
+    </div>
+  </div>
+
+  <div class="scroll-indicator">
+    <i class="fas fa-chevron-down"></i>
+  </div>
+</section>
+
+<!-- ===== STATS ===== -->
+<section class="section section-darker">
+  <div class="container">
+    <div class="stat-block">
+      <div class="stat-item fade-in-up">
+        <div class="stat-num" data-counter="250">০</div>
+        <div class="stat-label">অদ্বিতীয় কার্ড</div>
+      </div>
+      <div class="stat-item fade-in-up">
+        <div class="stat-num" data-counter="200">০</div>
+        <div class="stat-label">গোপন মিশন</div>
+      </div>
+      <div class="stat-item fade-in-up">
+        <div class="stat-num" data-counter="100">০</div>
+        <div class="stat-label">মৌলিক প্রতীক</div>
+      </div>
+      <div class="stat-item fade-in-up">
+        <div class="stat-num" data-counter="14">০</div>
+        <div class="stat-label">কার্ড শ্রেণী</div>
+      </div>
+      <div class="stat-item fade-in-up">
+        <div class="stat-num" data-counter="10">০</div>
+        <div class="stat-label">এক্সপানশন প্যাক</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== GAME PHILOSOPHY ===== -->
+<section class="section">
+  <div class="container">
+    <div class="section-header fade-in-up">
+      <div class="section-tag">Game Philosophy</div>
+      <h2 class="section-title">গেম দর্শন</h2>
+      <div class="section-title-en">A NEW WAY TO PLAY</div>
+      <div class="section-divider"></div>
+    </div>
+
+    <p class="lead text-center fade-in-up" style="max-width:800px;margin:0 auto 48px;">
+      "একটি কার্ড কেবল কাগজের টুকরো নয়—এটি একটি বীজ, যা টেবিলের উপর অঙ্কুরিত হয়ে একটি সম্পূর্ণ পৃথিবীতে পরিণত হতে পারে।"
+    </p>
+
+    <div class="grid grid-3">
+      <div class="feature-card fade-in-up">
+        <div class="feature-icon"><i class="fas fa-seedling"></i></div>
+        <h3 class="feature-title">স্থাপন, ফেলা নয়</h3>
+        <p class="feature-desc">
+          রূপান্তরে কার্ড ফেলা হয় না। কার্ড স্থাপন করা হয়। প্রতিটি কার্ড একটি স্থায়ী বস্তু—একবার স্থাপন করলে সে টেবিলের একটি অংশ হয়ে যায়।
+        </p>
+      </div>
+      <div class="feature-card fade-in-up">
+        <div class="feature-icon"><i class="fas fa-infinity"></i></div>
+        <h3 class="feature-title">পরিবর্তনই স্থায়িত্ব</h3>
+        <p class="feature-desc">
+          রূপান্তরের বিশ্বে কিছুই স্থায়ী নয়। কার্ড ঘুরিয়ে দেওয়া যায়, সরানো যায়, উল্টে দেওয়া যায়, রূপান্তরিত করা যায়।
+        </p>
+      </div>
+      <div class="feature-card fade-in-up">
+        <div class="feature-icon"><i class="fas fa-mask"></i></div>
+        <h3 class="feature-title">গোপনীয়তার ক্ষমতা</h3>
+        <p class="feature-desc">
+          প্রতিটি খেলোয়াড়ের নিজস্ব গোপন মিশন থাকে। এই গোপনীয়তা গেমে একটি স্বতন্ত্র উত্তেজনা তৈরি করে।
+        </p>
+      </div>
+      <div class="feature-card fade-in-up">
+        <div class="feature-icon"><i class="fas fa-palette"></i></div>
+        <h3 class="feature-title">সৃষ্টির আনন্দ</h3>
+        <p class="feature-desc">
+          গেম শেষে টেবিলের উপর যা থাকে তা কেবল একটি জেতা-হারার ফলাফল নয়—এটি একটি সৃষ্টিশীল শিল্পকর্ম।
+        </p>
+      </div>
+      <div class="feature-card fade-in-up">
+        <div class="feature-icon"><i class="fas fa-handshake"></i></div>
+        <h3 class="feature-title">সহযোগিতায় প্রতিযোগিতা</h3>
+        <p class="feature-desc">
+          কোনো খেলোয়াড় একা জিততে পারে না। প্রতিটি মিশন পূরণের জন্য অন্য খেলোয়াড়দের কার্ড প্রয়োজন।
+        </p>
+      </div>
+      <div class="feature-card fade-in-up">
+        <div class="feature-icon"><i class="fas fa-star"></i></div>
+        <h3 class="feature-title">মৌলিকতা</h3>
+        <p class="feature-desc">
+          রূপান্তর UNO, Magic, Pokémon, বা অন্য কোনো গেমের মেকানিক কপি করে না। সম্পূর্ণ নতুন অনুভূতির গেম।
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CARD PREVIEW ===== -->
+<section class="section section-dark">
+  <div class="container">
+    <div class="section-header fade-in-up">
+      <div class="section-tag">Card Library</div>
+      <h2 class="section-title">কার্ড ভাণ্ডার</h2>
+      <div class="section-title-en">EXPLORE 250 UNIQUE CARDS</div>
+      <div class="section-divider"></div>
+    </div>
+
+    <p class="lead text-center fade-in-up" style="max-width:700px;margin:0 auto 48px;">
+      ১৪টি শ্রেণীতে বিভক্ত ২৫০টি অদ্ভুত কার্ড। প্রতিটির নিজস্ব আর্ট, ক্ষমতা, ও গল্প।
+    </p>
+
+    <div class="grid grid-4 fade-in-up" id="home-card-preview"></div>
+
+    <div class="text-center mt-7">
+      <a href="pages/cards.html" class="btn btn-primary">
+        <i class="fas fa-arrow-right"></i> সম্পূর্ণ ভাণ্ডার দেখুন
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== HOW TO PLAY ===== -->
+<section class="section section-gold">
+  <div class="container">
+    <div class="section-header fade-in-up">
+      <div class="section-tag">How to Play</div>
+      <h2 class="section-title">কীভাবে খেলবেন</h2>
+      <div class="section-title-en">GAME FLOW</div>
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="grid grid-4">
+      <div class="feature-card fade-in-up">
+        <div class="feature-icon"><i class="fas fa-cog"></i></div>
+        <h3 class="feature-title">১. সেটআপ</h3>
+        <p class="feature-desc">টেবিল প্রস্তুত করো, কার্ড শাফল করো, প্রত্যেকে ৫টি কার্ড ও ২টি গোপন মিশন পান।</p>
+      </div>
+      <div class="feature-card fade-in-up">
+        <div class="feature-icon"><i class="fas fa-hand-pointer"></i></div>
+        <h3 class="feature-title">২. স্থাপন</h3>
+        <p class="feature-desc">হাত থেকে একটি কার্ড টেবিলে স্থাপন করো। অবস্থান ও দিক নির্বাচন করো।</p>
+      </div>
+      <div class="feature-card fade-in-up">
+        <div class="feature-icon"><i class="fas fa-link"></i></div>
+        <h3 class="feature-title">৩. সংযোগ</h3>
+        <p class="feature-desc">কার্ডের সঙ্গে কার্ড যুক্ত হয়ে শৃঙ্খল গঠন করে। দিক মিললে অনুরণিত সংযোগ।</p>
+      </div>
+      <div class="feature-card fade-in-up">
+        <div class="feature-icon"><i class="fas fa-trophy"></i></div>
+        <h3 class="feature-title">৪. বিজয়</h3>
+        <p class="feature-desc">গোপন মিশন পূরণ করো, পয়েন্ট অর্জন করো, সবচেয়ে বেশি পয়েন্ট পাওয়া খেলোয়াড় বিজয়ী।</p>
+      </div>
+    </div>
+
+    <div class="text-center mt-7">
+      <a href="pages/rulebook.html" class="btn btn-outline">
+        <i class="fas fa-book"></i> সম্পূর্ণ রুলবুক
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CARD TYPES ===== -->
+<section class="section">
+  <div class="container">
+    <div class="section-header fade-in-up">
+      <div class="section-tag">Card Types</div>
+      <h2 class="section-title">কার্ড শ্রেণী</h2>
+      <div class="section-title-en">14 UNIQUE TYPES</div>
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="grid grid-auto" id="card-types-grid"></div>
+  </div>
+</section>
+
+<!-- ===== PLAY GAME CTA ===== -->
+<section class="section" style="background:linear-gradient(135deg, rgba(232,200,120,0.08) 0%, rgba(201,169,97,0.08) 100%);">
+  <div class="container">
+    <div class="grid grid-2 fade-in-up" style="align-items:center;gap:48px;">
+      <div>
+        <div class="section-tag" style="text-align:left;">PLAYABLE GAME MODE</div>
+        <h2 class="section-title" style="text-align:left;margin-top:8px;">এখনই খেলুন</h2>
+        <div class="section-title-en" style="text-align:left;margin-bottom:24px;">PLAY AGAINST AI</div>
+        <p class="lead" style="text-align:left;margin-bottom:24px;">
+          রূপান্তর গেমের সম্পূর্ণ ইন্টারঅ্যাকটিভ ভার্সন খেলুন। কার্ড স্থাপন করুন, সংযোগ গড়ে তুলুন, গোপন মিশন পূরণ করুন, এবং AI-এর বিরুদ্ধে জয়লাভ করুন।
+        </p>
+        <ul style="list-style:none;margin-bottom:32px;">
+          <li style="color:#B8C0D4;margin-bottom:12px;font-size:1rem;"><i class="fas fa-check-circle" style="color:#4A8A6F;margin-right:10px;"></i> ৩টি কঠিনতা স্তর (সহজ, সাধারণ, কঠিন)</li>
+          <li style="color:#B8C0D4;margin-bottom:12px;font-size:1rem;"><i class="fas fa-check-circle" style="color:#4A8A6F;margin-right:10px;"></i> ২৫০টি কার্ড থেকে এলোমেলো হাত</li>
+          <li style="color:#B8C0D4;margin-bottom:12px;font-size:1rem;"><i class="fas fa-check-circle" style="color:#4A8A6F;margin-right:10px;"></i> গোপন মিশন ও রিয়েল-টাইম স্কোরিং</li>
+          <li style="color:#B8C0D4;margin-bottom:12px;font-size:1rem;"><i class="fas fa-check-circle" style="color:#4A8A6F;margin-right:10px;"></i> সংযোগ ও অনুরণিত সংযোগ সনাক্তকরণ</li>
+          <li style="color:#B8C0D4;margin-bottom:12px;font-size:1rem;"><i class="fas fa-check-circle" style="color:#4A8A6F;margin-right:10px;"></i> দিক নির্বাচন ও কৌশলগত স্থাপন</li>
+        </ul>
+        <a href="pages/play.html" class="btn btn-primary" style="font-size:1.1rem;padding:16px 32px;">
+          <i class="fas fa-play"></i> এখনই খেলা শুরু করুন
+        </a>
+      </div>
+      <div style="position:relative;">
+        <div style="background:linear-gradient(160deg, rgba(26,34,56,0.8) 0%, rgba(10,14,26,0.8) 100%);border:1px solid rgba(201,169,97,0.3);border-radius:20px;padding:32px;box-shadow:0 20px 60px rgba(0,0,0,0.5);">
+          <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:20px;">
+            <div style="aspect-ratio:0.72;background:linear-gradient(160deg,#FF3B3B,#780000);border:1.5px solid #FFD60A;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:0.5rem;color:white;font-weight:700;">বীজ</div>
+            <div style="aspect-ratio:0.72;background:linear-gradient(160deg,#3A86FF,#003566);border:1.5px solid #FFD60A;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:0.5rem;color:white;font-weight:700;">সময়</div>
+            <div style="aspect-ratio:0.72;background:linear-gradient(160deg,#FFD60A,#8B6914);border:1.5px solid #E63946;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:0.5rem;color:#1A1612;font-weight:700;">মিশন</div>
+            <div style="aspect-ratio:0.72;background:rgba(201,169,97,0.05);border:1px dashed rgba(201,169,97,0.3);border-radius:6px;"></div>
+            <div style="aspect-ratio:0.72;background:linear-gradient(160deg,#9D4EDD,#3C096C);border:1.5px solid #FFB703;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:0.5rem;color:white;font-weight:700;">স্মৃতি</div>
+            <div style="aspect-ratio:0.72;background:linear-gradient(160deg,#06A77D,#023C2C);border:1.5px solid #FFE066;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:0.5rem;color:white;font-weight:700;">বিশ্ব</div>
+            <div style="aspect-ratio:0.72;background:linear-gradient(160deg,#FFB703,#7B4400);border:1.5px solid #FF3B3B;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:0.5rem;color:#1A1612;font-weight:700;">কিংবদন্তি</div>
+            <div style="aspect-ratio:0.72;background:rgba(201,169,97,0.05);border:1px dashed rgba(201,169,97,0.3);border-radius:6px;"></div>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;padding-top:16px;border-top:1px solid rgba(201,169,97,0.2);">
+            <div style="text-align:center;">
+              <div style="font-size:0.7rem;color:#8A7548;letter-spacing:0.1em;">আপনি</div>
+              <div style="font-family:'Cinzel',serif;font-weight:800;font-size:1.5rem;color:#E8C878;">24</div>
+            </div>
+            <div style="font-family:'Cinzel',serif;color:#C9A961;font-size:0.8rem;letter-spacing:0.2em;">VS</div>
+            <div style="text-align:center;">
+              <div style="font-size:0.7rem;color:#8A7548;letter-spacing:0.1em;">AI</div>
+              <div style="font-family:'Cinzel',serif;font-weight:800;font-size:1.5rem;color:#8B3A4A;">18</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="section section-darker" style="text-align:center;">
+  <div class="container-narrow fade-in-up">
+    <svg width="80" height="80" viewBox="0 0 100 100" style="margin:0 auto 24px;">
+      <circle cx="50" cy="50" r="44" fill="none" stroke="#C9A961" stroke-width="1.5"/>
+      <polygon points="50,28 56,50 50,72 44,50" fill="#E8C878"/>
+      <polygon points="28,50 50,44 72,50 50,56" fill="#C9A961"/>
+      <circle cx="50" cy="50" r="3" fill="#FFE066"/>
+    </svg>
+    <h2 class="h1 mb-4">গেমটি অনুভব করুন</h2>
+    <p class="lead mb-7">
+      রূপান্তর কেবল একটি গেম নয়—এটি একটি দর্শন, একটি আচরণ-কলা, এবং একটি সৃষ্টিশীল অভিজ্ঞতা।
+    </p>
+    <div class="d-flex gap-4 justify-center flex-wrap">
+      <a href="pages/cards.html" class="btn btn-primary">
+        <i class="fas fa-clone"></i> কার্ড দেখুন
+      </a>
+      <a href="pages/missions.html" class="btn btn-outline">
+        <i class="fas fa-bullseye"></i> মিশন দেখুন
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="nav-logo">
+          <svg class="nav-logo-emblem" viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="44" fill="none" stroke="#C9A961" stroke-width="1.5"/>
+            <polygon points="50,28 56,50 50,72 44,50" fill="#E8C878"/>
+            <polygon points="28,50 50,44 72,50 50,56" fill="#C9A961"/>
+            <circle cx="50" cy="50" r="3" fill="#FFE066"/>
+          </svg>
+          রূপান্তর
+        </div>
+        <p>একটি প্রিমিয়াম বাংলা কার্ড গেম। সম্পূর্ণ মৌলিক মেকানিক, নতুন বিশ্ব, নতুন প্রতীক ব্যবস্থার উপর প্রতিষ্ঠিত।</p>
+      </div>
+      <div class="footer-col">
+        <h4>গেম</h4>
+        <ul>
+          <li><a href="pages/cards.html">কার্ড ভাণ্ডার</a></li>
+          <li><a href="pages/rulebook.html">রুলবুক</a></li>
+          <li><a href="pages/missions.html">মিশন</a></li>
+          <li><a href="pages/expansions.html">এক্সপানশন</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>সম্পর্কে</h4>
+        <ul>
+          <li><a href="pages/faq.html">প্রশ্নোত্তর</a></li>
+          <li><a href="#">গেম দর্শন</a></li>
+          <li><a href="#">কাহিনি</a></li>
+          <li><a href="#">ডিজাইনার</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>যোগাযোগ</h4>
+        <ul>
+          <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
+          <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+          <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+          <li><a href="#"><i class="fas fa-envelope"></i> ইমেইল</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © ২০২৬ রূপান্তর গেম স্টুডিও · EDITION I · MMXXVI · কার্ড নয়, পৃথিবী বদলাও
+    </div>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+<script>
+// Render card types on home page
+(function() {
+  const grid = document.getElementById('card-types-grid');
+  if (!grid || !window.RUPANTOR_DATA) return;
+  const types = window.RUPANTOR_DATA.CARD_TYPES;
+  const counts = {};
+  window.RUPANTOR_DATA.CARDS.forEach(function(c) {
+    counts[c.type] = (counts[c.type] || 0) + 1;
+  });
+  Object.keys(types).forEach(function(key) {
+    const t = types[key];
+    const card = document.createElement('div');
+    card.className = 'card-tile fade-in-up';
+    card.style.setProperty('--card-color', t.color);
+    card.innerHTML =
+      '<div class="card-tile-num">' + t.en + '</div>' +
+      '<div class="card-tile-name">' + t.bn + ' কার্ড</div>' +
+      '<div class="card-tile-en">' + counts[key] + ' CARDS</div>' +
+      '<div class="card-tile-art">' +
+        '<svg viewBox="0 0 100 100">' +
+          '<circle cx="50" cy="50" r="40" fill="' + t.color + '" opacity="0.3"/>' +
+          '<circle cx="50" cy="50" r="25" fill="' + t.color + '"/>' +
+          '<circle cx="50" cy="50" r="12" fill="' + t.accent + '"/>' +
+        '</svg>' +
+      '</div>' +
+      '<span class="card-tile-type">' + t.bn + '</span>';
+    grid.appendChild(card);
+  });
+})();
+</script>
+
+</body>
+</html>

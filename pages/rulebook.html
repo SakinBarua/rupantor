@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="রূপান্তর রুলবুক — সম্পূর্ণ নিয়মাবলি">
+  <title>রুলবুক — রূপান্তর</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Noto+Sans+Bengali:wght@300;400;500;600;700;800;900&family=Noto+Serif+Bengali:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <style>
+    .rulebook-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: center;
+      margin-bottom: 48px;
+    }
+    .rulebook-tab {
+      padding: 12px 24px;
+      font-family: 'Noto Sans Bengali', sans-serif;
+      font-weight: 600;
+      color: #B8C0D4;
+      background: rgba(26,34,56,0.4);
+      border: 1px solid rgba(201,169,97,0.2);
+      border-radius: 9999px;
+      transition: all 0.3s ease;
+    }
+    .rulebook-tab:hover { color: #F5F1E8; border-color: #C9A961; }
+    .rulebook-tab.active {
+      background: linear-gradient(135deg, #C9A961 0%, #8B6914 100%);
+      color: #0A0E1A;
+      border-color: #E8C878;
+    }
+    .rulebook-panel { display: none; }
+    .rulebook-panel.active { display: block; animation: fadeIn 0.4s ease; }
+    @keyframes fadeIn { from { opacity:0; transform:translateY(20px);} to { opacity:1; transform:translateY(0);} }
+
+    .rule-section {
+      background: rgba(26,34,56,0.4);
+      border: 1px solid rgba(201,169,97,0.15);
+      border-radius: 16px;
+      padding: 32px;
+      margin-bottom: 24px;
+    }
+    .rule-section h3 {
+      color: #E8C878;
+      font-size: 1.4rem;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .rule-section h3 i { color: #C9A961; }
+    .rule-section ol, .rule-section ul {
+      padding-left: 24px;
+      margin: 12px 0;
+    }
+    .rule-section li {
+      margin-bottom: 8px;
+      color: #B8C0D4;
+      line-height: 1.7;
+    }
+    .rule-section p {
+      color: #B8C0D4;
+      margin-bottom: 12px;
+      line-height: 1.7;
+    }
+    .rule-section strong { color: #F5F1E8; }
+  </style>
+</head>
+<body>
+
+<!-- ===== NAVIGATION ===== -->
+<nav class="nav">
+  <div class="nav-container">
+    <a href="../index.html" class="nav-logo">
+      <svg class="nav-logo-emblem" viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="44" fill="none" stroke="#C9A961" stroke-width="1.5"/>
+        <polygon points="50,28 56,50 50,72 44,50" fill="#E8C878"/>
+        <polygon points="28,50 50,44 72,50 50,56" fill="#C9A961"/>
+        <circle cx="50" cy="50" r="3" fill="#FFE066"/>
+      </svg>
+      রূপান্তর
+    </a>
+    <ul class="nav-menu">
+      <li><a href="../index.html" class="nav-link">হোম</a></li>
+      <li><a href="cards.html" class="nav-link">কার্ড ভাণ্ডার</a></li>
+      <li><a href="rulebook.html" class="nav-link">রুলবুক</a></li>
+      <li><a href="play.html" class="nav-link" style="color:#E8C878;font-weight:700;"><i class="fas fa-play"></i> খেলুন</a></li>
+      <li><a href="missions.html" class="nav-link">মিশন</a></li>
+      <li><a href="expansions.html" class="nav-link">এক্সপানশন</a></li>
+      <li><a href="faq.html" class="nav-link">প্রশ্নোত্তর</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="মেনু">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ===== PAGE HERO ===== -->
+<section class="page-hero">
+  <div class="page-hero-content">
+    <div class="display-en">Rulebook</div>
+    <h1 class="display-1">রুলবুক</h1>
+    <div class="display-en" style="margin-top:8px;">COMPLETE RULES · ALL MODES</div>
+    <p class="lead" style="max-width:700px;margin:32px auto 0;">
+      গেমের সমস্ত নিয়ম, সব ধরনের মোড, এবং প্রতিটি পরিস্থিতির বিস্তারিত বিবরণ।
+    </p>
+  </div>
+</section>
+
+<!-- ===== RULEBOOK ===== -->
+<section class="section">
+  <div class="container">
+
+    <!-- Tabs -->
+    <div class="rulebook-tabs">
+      <button class="rulebook-tab active" data-tab="setup"><i class="fas fa-cog"></i> সেটআপ</button>
+      <button class="rulebook-tab" data-tab="turn"><i class="fas fa-play"></i> টার্ন কাঠামো</button>
+      <button class="rulebook-tab" data-tab="actions"><i class="fas fa-hand-pointer"></i> ক্রিয়া</button>
+      <button class="rulebook-tab" data-tab="modes"><i class="fas fa-users"></i> খেলোয়াড় মোড</button>
+      <button class="rulebook-tab" data-tab="advanced"><i class="fas fa-star"></i> উন্নত</button>
+    </div>
+
+    <!-- Setup Panel -->
+    <div class="rulebook-panel active" id="tab-setup">
+      <div class="rule-section">
+        <h3><i class="fas fa-cog"></i> গেম সেটআপ</h3>
+        <p>গেম শুরুর আগে নিম্নলিখিত পদক্ষেপগুলো অনুসরণ করুন। এই সেটআপ প্রক্রিয়া প্রায় পাঁচ থেকে দশ মিনিট সময় নেয়।</p>
+        <ol>
+          <li><strong>টেবিল প্রস্তুত করো:</strong> একটি সমতল টেবিলে প্লে-ম্যাট বিছান। ম্যাটের কেন্দ্র চিহ্নিত করো।</li>
+          <li><strong>কার্ড ডেক প্রস্তুত করো:</strong> ২৫০টি মূল কার্ড ভালোভাবে শাফল করো।</li>
+          <li><strong>মিশন ডেক প্রস্তুত করো:</strong> ২০০টি গোপন মিশন কার্ড আলাদাভাবে শাফল করো।</li>
+          <li><strong>টোকেন ও মার্কার সাজাও:</strong> সব টোকেন, মার্কার, ক্রিস্টাল টেবিলের একপাশে সাজাও।</li>
+          <li><strong>গোত্র বোর্ড বিতরণ:</strong> প্রতিটি খেলোয়াড় একটি গোত্র বোর্ড বেছে নেন।</li>
+          <li><strong>প্রারম্ভিক হাত বিতরণ:</strong> প্রতিটি খেলোয়াড় মূল ডেক থেকে পাঁচটি কার্ড টানেন।</li>
+          <li><strong>গোপন মিশন বিতরণ:</strong> প্রতিটি খেলোয়াড় মিশন ডেক থেকে দুটি মিশন কার্ড টানেন।</li>
+          <li><strong>স্টার্টার টোকেন স্থাপন:</strong> প্রতিটি খেলোয়াড় তাঁর রঙের স্টার্টার টোকেন রাখেন।</li>
+          <li><strong>প্রথম খেলোয়াড় নির্বাচন:</strong> সবচেয়ে কম বয়সী খেলোয়াড় প্রথম টার্নে খেলেন।</li>
+        </ol>
+      </div>
+
+      <div class="rule-section">
+        <h3><i class="fas fa-flag"></i> প্রথম টার্ন</h3>
+        <p>প্রথম খেলোয়াড় গেম শুরু করেন। তাঁর টার্নে তিনি একটি কার্ড স্থাপন করবেন অথবা একটি কার্ড টানবেন। যেহেতু টেবিল ফাঁকা, প্রথম কার্ড সাধারণত টেবিলের কেন্দ্রে স্থাপিত হয়। এই প্রথম কার্ডকে বলা হয় <strong>'বীজ কার্ড'</strong>।</p>
+      </div>
+    </div>
+
+    <!-- Turn Panel -->
+    <div class="rulebook-panel" id="tab-turn">
+      <div class="rule-section">
+        <h3><i class="fas fa-play"></i> টার্ন কাঠামো</h3>
+        <p>প্রতিটি খেলোয়াড়ের টার্ন তিনটি পর্যায়ে বিভক্ত:</p>
+        <ol>
+          <li><strong>প্রস্তুতি পর্যায়:</strong> গোত্র বোর্ডের সক্রিয় ক্ষমতা পর্যালোচনা, সংলগ্ন কার্ড দেখা, মিশনের অগ্রগতি যাচাই।</li>
+          <li><strong>প্রধান পর্যায়:</strong> একটি প্রধান ক্রিয়া সম্পাদন।</li>
+          <li><strong>সমাপ্তি পর্যায়:</strong> হাত পর্যালোচনা (সাতটির বেশি হলে বর্জন), টার্ন পাস।</li>
+        </ol>
+      </div>
+
+      <div class="rule-section">
+        <h3><i class="fas fa-list-check"></i> প্রধান ক্রিয়াসমূহ</h3>
+        <p>প্রতি টার্নে কেবল একটি প্রধান ক্রিয়া সম্পাদন করা যায়:</p>
+        <ul style="list-style:disc;">
+          <li><strong>কার্ড স্থাপন:</strong> হাত থেকে একটি কার্ড টেবিলে স্থাপন।</li>
+          <li><strong>কার্ড টানা:</strong> মূল ডেক থেকে একটি কার্ড টানা।</li>
+          <li><strong>কার্ড ঘুরানো:</strong> স্থাপিত কার্ড ৯০ ডিগ্রি ঘুরানো।</li>
+          <li><strong>কার্ড সরানো:</strong> কার্ড এক স্থান থেকে অন্য স্থানে সরানো।</li>
+          <li><strong>কার্ড উল্টানো:</strong> কার্ড উল্টে দেওয়া।</li>
+          <li><strong>স্তর স্থাপন:</strong> স্থাপিত কার্ডের উপর আরেকটি স্থাপন।</li>
+          <li><strong>সক্রিয় ক্ষমতা ব্যবহার:</strong> কার্ডের সক্রিয় ক্ষমতা ব্যবহার।</li>
+          <li><strong>মিশন প্রকাশ:</strong> পূরণ হওয়া মিশন প্রকাশ ও পুরস্কার গ্রহণ।</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Actions Panel -->
+    <div class="rulebook-panel" id="tab-actions">
+      <div class="rule-section">
+        <h3><i class="fas fa-hand-pointer"></i> স্থাপন নিয়ম</h3>
+        <p>কার্ড টেবিলের যেকোনো স্থানে স্থাপন করা যায়। কার্ডের চারটি দিকের একটি নির্বাচন করতে হবে—উত্তর, পূর্ব, দক্ষিণ, বা পশ্চিম।</p>
+      </div>
+
+      <div class="rule-section">
+        <h3><i class="fas fa-link"></i> সংযোগ নিয়ম</h3>
+        <p>দুটি কার্ড সংলগ্ন হলে তাদের মধ্যে সংযোগ স্থাপিত হয়। দিক মিলে গেলে <strong>'অনুরণিত সংযোগ'</strong> জন্ম নেয়, যা শক্তিশালী। তিন বা ততোধিক কার্ড পরপর সংযুক্ত হলে একটি <strong>'শৃঙ্খল'</strong> গঠিত হয়।</p>
+      </div>
+
+      <div class="rule-section">
+        <h3><i class="fas fa-arrows-rotate"></i> ঘূর্ণন ও স্থানান্তর</h3>
+        <p>কার্ড ৯০ ডিগ্রি ঘুরানো যায়। স্থাপিত কার্ড সরানো যায় এক ইউনিট দূরত্বে। কিছু বিশেষ কার্ডের ক্ষমতা সরাসরি স্থান পরিবর্তন করতে পারে।</p>
+      </div>
+
+      <div class="rule-section">
+        <h3><i class="fas fa-layer-group"></i> স্তর ও বিবর্তন</h3>
+        <p>কোর কার্ড নির্দিষ্ট শর্ত পূরণ করলে বিবর্তিত হতে পারে। বিবর্তন কার্ড কোর কার্ডের উপর স্থাপিত হয়। তিন স্তর পর্যন্ত কার্ড স্থাপন করা যায়।</p>
+      </div>
+
+      <div class="rule-section">
+        <h3><i class="fas fa-eye"></i> জাগরণ ও বাস্তবতা স্থানান্তর</h3>
+        <p>কিছু কার্ড নির্দিষ্ট শর্ত পূরণ হলে জাগ্রত হয়। বাস্তবতা কার্ড খেললে পুরো টেবিল ৯০ ডিগ্রি ঘুরে যায়—সব সম্পর্ক পাল্টে যায়।</p>
+      </div>
+
+      <div class="rule-section">
+        <h3><i class="fas fa-trophy"></i> বিজয় ও টাই ব্রেক</h3>
+        <p>গেমের শেষে সবচেয়ে বেশি পয়েন্ট পাওয়া খেলোয়াড় বিজয়ী। পয়েন্ট আসে তিনটি উৎস থেকে: মিশন (৩-১০ পয়েন্ট), কার্ড (১-৫ পয়েন্ট), বোনাস। টাই হলে প্রথমে মিশন সংখ্যা, তারপর কার্ড সংখ্যা দেখা হয়।</p>
+      </div>
+    </div>
+
+    <!-- Modes Panel -->
+    <div class="rulebook-panel" id="tab-modes">
+      <div class="rule-section">
+        <h3><i class="fas fa-user"></i> সোলো মোড</h3>
+        <p>একা খেলার জন্য সোলো মোড। একজন খেলোয়াড় একটি নির্দিষ্ট লক্ষ্য নিয়ে খেলেন—যেমন ৫০ পয়েন্ট অর্জন বা পাঁচটি মিশন পূরণ। একটি 'অটো-প্লে' ব্যবস্থা বিপক্ষ হিসেবে কাজ করে।</p>
+      </div>
+
+      <div class="rule-section">
+        <h3><i class="fas fa-user-group"></i> দুই খেলোয়াড়</h3>
+        <p>প্রত্যেকে তিনটি গোপন মিশন পান। টেবিল ৬০×৬০ সেমি। গেমের সময় ৩০-৪৫ মিনিট। গভীর মনস্তাত্ত্বিক খেলা গড়ে ওঠে।</p>
+      </div>
+
+      <div class="rule-section">
+        <h3><i class="fas fa-users"></i> তিন খেলোয়াড়</h3>
+        <p>প্রত্যেকে দুটি মিশন পান। টেবিল ৮০×৮০ সেমি। গেমের সময় ৩০-৪০ মিনিট। মিত্রতা ও প্রতিযোগিতার ভারসাম্য গুরুত্বপূর্ণ।</p>
+      </div>
+
+      <div class="rule-section">
+        <h3><i class="fas fa-users"></i> চার খেলোয়াড়</h3>
+        <p>সবচেয়ে ভারসাম্যপূর্ণ। প্রত্যেকে দুটি মিশন পান। টেবিল ১০০×১০০ সেমি। গেমের সময় ৩৫-৪৫ মিনিট। দুটি মিত্রতা গড়ে ওঠে।</p>
+      </div>
+
+      <div class="rule-section">
+        <h3><i class="fas fa-users"></i> পাঁচ ও ছয় খেলোয়াড়</h3>
+        <p>পাঁচ খেলোয়াড়ে প্রত্যেকে একটি মিশন পান। ছয় খেলোয়াড়ে তিনটি জোড়া গঠিত হতে পারে। গেমের সময় ৪৫-৬০ মিনিট।</p>
+      </div>
+    </div>
+
+    <!-- Advanced Panel -->
+    <div class="rulebook-panel" id="tab-advanced">
+      <div class="rule-section">
+        <h3><i class="fas fa-trophy"></i> টুর্নামেন্ট নিয়ম</h3>
+        <p>টুর্নামেন্টে প্রতিটি ম্যাচের সময়সীমা ৬০ মিনিট। যদি সময়ের মধ্যে গেম শেষ না হয়, তবে বর্তমান অবস্থানের উপর ভিত্তি করে বিজয়ী নির্ধারিত হয়।</p>
+      </div>
+
+      <div class="rule-section">
+        <h3><i class="fas fa-route"></i> ক্যাম্পেইন মোড</h3>
+        <p>একাধিক গেম ধারাবাহিকভাবে খেলা হয়। প্রতিটি গেমের ফলাফল পরবর্তী গেমে প্রভাব ফেলে। একটি সম্পূর্ণ ক্যাম্পেইন সাধারণত পাঁচ থেকে দশটি গেমের সমন্বয়ে গঠিত।</p>
+      </div>
+
+      <div class="rule-section">
+        <h3><i class="fas fa-fire"></i> হার্ডকোর মোড</h3>
+        <p>সব নিয়ম কঠোরভাবে প্রয়োগ করা হয়। কোনো ভুল সহ্য করা হয় না। গেমের সময় ৬০-৯০ মিনিট। অভিজ্ঞ খেলোয়াড়দের জন্য।</p>
+      </div>
+
+      <div class="rule-section">
+        <h3><i class="fas fa-home"></i> ফ্যামিলি ও কিডস মোড</h3>
+        <p><strong>ফ্যামিলি মোড:</strong> কিছু জটিল নিয়ম সরল করা হয়। বাস্তবতা স্থানান্তর সরানো হয়, মিশন কমানো হয়।</p>
+        <p><strong>কিডস মোড:</strong> সবচেয়ে সরল—কেবল কোর কার্ড, কোনো বিশেষ ক্ষমতা নেই। আট বছর বা তার কম বয়সীদের জন্য।</p>
+      </div>
+
+      <div class="rule-section">
+        <h3><i class="fas fa-percent"></i> ব্যালেন্সিং</h3>
+        <p>ভাগ্য ও দক্ষতার অনুপাত প্রায় ৩০:৭০। ৩০% ভাগ্য—কোন কার্ড টানা হবে। ৭০% দক্ষতা—কীভাবে কার্ড স্থাপন করা হবে। প্রথম-টার্ন সুবিধা নগণ্য (~১৮.৫% জয়ের হার)।</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="nav-logo">
+          <svg class="nav-logo-emblem" viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="44" fill="none" stroke="#C9A961" stroke-width="1.5"/>
+            <polygon points="50,28 56,50 50,72 44,50" fill="#E8C878"/>
+            <polygon points="28,50 50,44 72,50 50,56" fill="#C9A961"/>
+            <circle cx="50" cy="50" r="3" fill="#FFE066"/>
+          </svg>
+          রূপান্তর
+        </div>
+        <p>একটি প্রিমিয়াম বাংলা কার্ড গেম। সম্পূর্ণ মৌলিক মেকানিক, নতুন বিশ্ব, নতুন প্রতীক ব্যবস্থার উপর প্রতিষ্ঠিত।</p>
+      </div>
+      <div class="footer-col">
+        <h4>গেম</h4>
+        <ul>
+          <li><a href="cards.html">কার্ড ভাণ্ডার</a></li>
+          <li><a href="rulebook.html">রুলবুক</a></li>
+          <li><a href="missions.html">মিশন</a></li>
+          <li><a href="expansions.html">এক্সপানশন</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>সম্পর্কে</h4>
+        <ul>
+          <li><a href="faq.html">প্রশ্নোত্তর</a></li>
+          <li><a href="../index.html">গেম দর্শন</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>যোগাযোগ</h4>
+        <ul>
+          <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
+          <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © ২০২৬ রূপান্তর গেম স্টুডিও · EDITION I · MMXXVI · কার্ড নয়, পৃথিবী বদলাও
+    </div>
+  </div>
+</footer>
+
+<script src="../js/data.js"></script>
+<script src="../js/main.js"></script>
+
+</body>
+</html>
